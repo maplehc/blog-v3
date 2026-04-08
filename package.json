@@ -82,6 +82,7 @@
     "stylelint": "catalog:quality",
     "tsx": "catalog:framework",
     "typescript": "catalog:framework",
-    "unplugin-yaml": "catalog:framework"
+    "unplugin-yaml": "catalog:framework",
+    "wrangler": "^4.81.0"
   }
 }
