@@ -76,11 +76,23 @@ export default defineNuxtConfig({
 
 	nitro: {
 		prerender: {
-			// ??????????????? `/`????? 404 ??
+			// 修复部分平台会在文章路径后添加 `/`，导致闪烁 404 错误
 			// https://github.com/nuxt/content/issues/2378
 			autoSubfolderIndex: CLOUDFLARE_PAGES || GITHUB_ACTIONS || NETLIFY ? false : undefined,
-			// ?????????????
+			// 避免预渲染失败导致构建中断
 			failOnError: false,
+		},
+		// 允许 ESM.sh 作为外部依赖
+		externals: {
+			allow: [
+				'https://esm.sh/**',
+			],
+		},
+		// 或者配置 rollup 选项
+		rollupConfig: {
+			external: [
+				/^https:\/\/esm\.sh\/.*/,
+			],
 		},
 	},
 
