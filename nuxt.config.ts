@@ -83,12 +83,6 @@ export default defineNuxtConfig({
 			failOnError: false,
 		},
 		// 允许 ESM.sh 作为外部依赖
-		externals: {
-			allow: [
-				'https://esm.sh/**',
-			],
-		},
-		// 或者配置 rollup 选项
 		rollupConfig: {
 			external: [
 				/^https:\/\/esm\.sh\/.*/,
