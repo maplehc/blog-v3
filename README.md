@@ -68,60 +68,9 @@
 
 ## 目录结构
 
-项目使用 [Nuxt 4 项目目录结构](https://nuxt.com/docs/4.x/guide/directory-structure/app/app)。
+项目采用 Nuxt 4 架构模式。有关详细的目录结构、文件职责及开发规范，请参阅 [项目目录结构指南](docs/project-structure-guide.md)。
 
-```sh
-.
-├── app # 前端
-│   ├── assets # 资源文件
-│   ├── components # 组件
-│   │   ├── blog # 博客布局组件
-│   │   ├── content # MDC组件
-│   │   ├── partial # 微型组件
-│   │   ├── popover # 弹窗组件
-│   │   ├── post # 文章组件
-│   │   ├── util # 功能组件
-│   │   └── widget # 侧栏小组件
-│   ├── composables # Vue 组合式函数
-│   ├── pages # 页面
-│   │   ├── [...slug].vue # 正文、404页面
-│   │   ├── archive.vue # 归档
-│   │   ├── link.vue # 友链
-│   │   ├── index.vue # 首页
-│   │   └── preview.vue # 预览的文章
-│   ├── plugins # Nuxt / Vue 插件
-│   ├── stores # Pinia 状态管理
-│   ├── types # 类型定义
-│   ├── utils # 工具函数
-│   ├── app.config.ts # 前端响应式配置★
-│   ├── app.vue # 基本布局
-│   ├── error.vue # 意外错误页
-│   └── feeds.ts # 友链列表★
-├── content # 文章
-│   ├── posts # 正式文章
-│   ├── previews # 草稿文章，仅可被站内搜索
-│   ├── link.md # 友链要求
-│   └── theme.md # 主题介绍
-├── modules # Nuxt 模块
-│   └── anti-mirror # 恶意反代跳转
-├── patches # npm 包补丁
-├── public # 静态资源，生成在站点根目录
-│   ├── assets # 订阅源 XSLT 模板
-│   └── fonts # 字体
-├── remark-plugins # Unified 生态插件
-├── scripts # npm 脚本
-├── server # 服务端
-│   ├── api # 接口
-│   │   └── stats.get.ts # 博客静态统计
-│   └── routes # 根路由
-│       ├── atom.xml.get.ts # Atom 订阅源
-│       └── zhilu.opml.get.ts # OPML 订阅源聚合
-├── blog.config.ts # 博客静态公共配置★
-├── content.config.ts # Nuxt Content 配置
-├── edgeone.json # EdgeOne 配置
-├── nuxt.config.ts # Nuxt 配置
-└── redirects.json # 旧站点重定向配置
-```
+---
 
 ## 快速开始
 
