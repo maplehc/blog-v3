@@ -1,5 +1,6 @@
 ---
 title: 主题
+date: 2026-03-11
 hideInfo: true
 
 aside: [toc, meta-aside-github]

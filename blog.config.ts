@@ -7,7 +7,7 @@ const basicConfig = {
 	description: '红枫树的个人博客，分享技术与生活。',
 	author: {
 		name: '红枫树',
-		avatar: 'https://github.com/maplehc.png',
+		avatar: '/avatar.png',
 		email: 'hi@redm.cc.cd',
 		homepage: 'https://redm.cc.cd/',
 	},
@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://github.com/maplehc.png',
+	favicon: '/avatar.png',
 	language: 'zh-CN',
 	timeEstablished: '2026-03-11',
 	timeZone: 'Asia/Shanghai',
