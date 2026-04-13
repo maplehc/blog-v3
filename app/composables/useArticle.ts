@@ -7,9 +7,15 @@ import { orderBy } from 'es-toolkit/array'
  * @see https://github.com/nuxt/nuxt/issues/14736
  * @todo 支持分页/分类筛选
  */
-export function useArticleIndexOptions(path = 'posts/%') {
-	return queryCollection('content')
-		.where('stem', 'LIKE', path)
+export function useArticleIndexOptions(path?: string) {
+	const query = queryCollection('content')
+
+	if (path)
+		query.where('stem', 'LIKE', path)
+	else
+		query.where('stem', 'NOT LIKE', 'previews/%')
+
+	return query
 		.select('categories', 'date', 'description', 'image', 'path', 'readingTime', 'recommend', 'tags', 'title', 'type', 'updated')
 		.all()
 }
